@@ -9,4 +9,6 @@
 // 6. String Matching and Parsing
 // 7. Primality Testing Algorithms
 
-class Algo {};
+class Algo {
+	void quickSort();
+};
