@@ -14,7 +14,8 @@
 // 11. Red-Black Trees
 // 12. K-ary Trees
 // 13. Ternary Tree
-// 14. Tuple
+// 14. Vector
+// 15. Tuple
 // More at https://en.wikipedia.org/wiki/List_of_data_structures
 
 // Shown in this program:
@@ -28,6 +29,7 @@
 // Queues
 // Graphs
 // Trees
+// Vector
 
 class Data {
 	float getArray();
@@ -40,4 +42,5 @@ class Data {
 	float getQueue();
 	float getGraph();
 	float getTree();
+	float getVector();
 };

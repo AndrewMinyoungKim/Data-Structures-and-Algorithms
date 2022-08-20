@@ -1,7 +1,4 @@
 #include <iostream>
-#include "Board.h"
-#include "Game.h"
-#include "Constants.h"
 
 using namespace std;
 

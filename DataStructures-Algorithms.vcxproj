@@ -132,6 +132,7 @@
     <ClCompile Include="Algo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="Algo.h" />
   </ItemGroup>
