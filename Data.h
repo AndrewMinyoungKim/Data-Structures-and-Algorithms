@@ -2,14 +2,14 @@
 
 // Data Structures:
 // 1. Array
-// 2. Linked List
+// 2. Linked List *
 // 3. Set
 // 4. Map/Dictionary
-// 5. Hash Table
+// 5. Hash Table *
 // 6. Matrix
 // 7. Stacks and Queues
-// 8. Heaps
-// 9. Graphs and Trees
+// 8. Heaps *
+// 9. Graphs and Trees *
 // 10. Binary Trees
 // 11. Red-Black Trees
 // 12. K-ary Trees
@@ -31,10 +31,11 @@
 // Trees
 // Vector
 
-class Data {
+class Data
+{
 	float getArray();
-	float getLinkedList();
 	float getSet();
+	float getLinkedList();
 	float getMap();
 	float getHash();
 	float getHeap();
