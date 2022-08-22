@@ -5,6 +5,7 @@
     "deque": "cpp",
     "system_error": "cpp",
     "vector": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "xiosbase": "cpp"
   }
 }

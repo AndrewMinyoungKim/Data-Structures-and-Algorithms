@@ -12,17 +12,17 @@ using namespace std;
 // Big O?
 
 // Linked List
-struct NodeStruct
+struct NodeLLStruct
 {
 	int data;
 	struct NodeStruct *next;
 };
 
-class Node
+class NodeLL
 {
 public:
 	int data;
-	Node *next;
+	NodeLL *next;
 };
 
 // Hash Table
@@ -122,11 +122,26 @@ void showq(queue<int> gq)
 // Tree
 // Structure of each node of the tree
 
-struct node
+struct NodeTreeStruct
 {
 	int data;
 	struct node *left;
 	struct node *right;
+};
+
+class NodeTree
+{
+public:
+	int data;
+	NodeTree *left;
+	NodeTree *right;
+
+	NodeTree(int val)
+	{
+		data = val;
+		left = NULL;
+		right = NULL;
+	}
 };
 
 // Data class functions
@@ -149,12 +164,12 @@ float getSet()
 
 float getLinkedList()
 {
-	Node *head = NULL;
+	NodeLL *head = NULL;
 
-	head = new Node();
+	head = new NodeLL();
 	head->data = 1;
 
-	Node *next = new Node();
+	NodeLL *next = new NodeLL();
 	next = head->next;
 
 	next->data = 2;
@@ -182,6 +197,9 @@ float getHash()
 // https://www.geeksforgeeks.org/heap-using-stl-c/
 float getHeap()
 {
+	// min heap or max heap
+	// min heap is a binary tree where the lowest numbers are at the top, the root being the lowest number in the whole tree
+
 	// Initializing a vector
 	vector<int> v1 = {20, 30, 40, 25, 15};
 
@@ -214,6 +232,15 @@ float getHeap()
 	// using front()
 	cout << "The maximum element of heap after pop is : ";
 	cout << v1.front() << endl;
+
+	// Heap Methods:
+	// make_heap(); // convert a range in a container to a heap
+	// front(); // display the first element of heap which is the maximum number
+	// push_heap(); // insert elements into heap. Heap size increases by 1. New element is placed appropriately in the heap
+	// pop_heap(); // delete the maximum element of the heap. Heap size decreses by 1. Heap elements are reorganized accordingly after this operation
+	// sort_heap(); // sort the heap. After this operation, the container is no longer a heap (put in ascending order)
+	// is_heap(); // check whether the container is heap or not. Returns true if container is heap o.w. false. Generally, in most implementations, the reverse sorted container is considered as heap.
+	// is_heap_until(); // returns the iterator to the position until the container is the heap. Generally, in most implementations, the reverse sorted container is considered as heap.
 }
 
 // https://www.geeksforgeeks.org/stack-in-cpp-stl/
@@ -282,6 +309,12 @@ float getQueue()
 // https://www.geeksforgeeks.org/graph-and-its-representations/
 float getGraph()
 {
+	// A graph is a data structure that consists of the following two components:
+	// 1. A finite set of vertices also called nodes
+	// 2. A finite set of ordered pair of the form (u,v) called edges
+	// In directed graphs, (u,v) and (v,u) are different. Edges may contain weight/value/cost
+	// Two most commonly used representation of graphs are Adjacency Matrix and Adjacency List
+
 	// Adjacency Matrix:
 	int n, m;
 	// n is num of vertices
@@ -314,7 +347,7 @@ float getGraph()
 float getTree()
 {
 	/*create root*/
-	// node *root = struct node(1);
+	NodeTree *root = new NodeTree(1);
 	/* following is the tree after above statement
 
 			 1
@@ -322,8 +355,8 @@ float getTree()
 		NULL   NULL
 	*/
 
-	// root->left = struct node(2);
-	// root->right = new node(3);
+	root->left = new NodeTree(2);
+	root->right = new NodeTree(3);
 	/* 2 and 3 become left and right children of 1
 				  1
 				/   \
@@ -332,7 +365,7 @@ float getTree()
 			NULL NULL NULL NULL
 	*/
 
-	// root->left->left = new node(4);
+	root->left->left = new NodeTree(4);
 	/* 4 becomes left child of 2
 			  1
 			/    \
